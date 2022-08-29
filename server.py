@@ -30,6 +30,7 @@ def handle(client):
             index = clients.index(client)
             clients.remove(client)
             client.close()
+            #print(f"{nicknames[clients.index(client)]} has left")
             nickname = nicknames[index]
             nicknames.remove(nickname)
             break
