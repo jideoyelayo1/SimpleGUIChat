@@ -30,8 +30,8 @@ def handle(client):
             index = clients.index(client)
             clients.remove(client)
             client.close()
-            #print(f"{nicknames[clients.index(client)]} has left")
             nickname = nicknames[index]
+            broadcast(f"{nickname} disconnected from the server!\n ".encode('utf-8'))
             nicknames.remove(nickname)
             break
 
